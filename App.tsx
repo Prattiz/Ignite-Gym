@@ -3,10 +3,10 @@ import { StatusBar } from 'react-native';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
 import { THEME } from 'src/theme';
-import { NativeBaseProvider, View } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 
 import { Loading } from '@components/loading';
-import { SignUp } from 'src/Screens/Login/SignUp';
+import { Routes } from '@routes/index';
 
 export default function App() {
 
@@ -25,7 +25,7 @@ export default function App() {
 
       {
         fontsLoaded? 
-          <SignUp/>
+          <Routes/>
           :
           <Loading/>
       }
