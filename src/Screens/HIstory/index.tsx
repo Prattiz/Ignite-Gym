@@ -1,7 +1,7 @@
 import { Center, Text } from "native-base";
 
-export function Home(){
+export function History(){
     return(
-        <h1>Hello History</h1>
+        <Text>Hello History</Text>
     )
 }
