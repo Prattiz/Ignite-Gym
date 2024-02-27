@@ -1,4 +1,4 @@
-import { FlatList, HStack, Heading, Text, VStack, Icon } from "native-base";
+import { FlatList, HStack, Heading, Text, VStack } from "native-base";
 
 import { useState } from "react";
 
@@ -57,8 +57,6 @@ export function Home(){
                     showsVerticalScrollIndicator={ false }
                 />
             </VStack>
-
-
             
         </VStack>
     )

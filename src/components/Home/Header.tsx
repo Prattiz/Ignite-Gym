@@ -1,6 +1,6 @@
 import { UserPhoto } from "@components/UserPhoto";
 import { HStack, Heading, Text, VStack, Icon } from "native-base";
-import DefaultImage from '@assets/userPhotoDefault.png'
+import DefaultImage from '@assets/userPhotoDefault.png';
 import { MaterialIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from "react-native";
 
