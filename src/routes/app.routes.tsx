@@ -36,6 +36,7 @@ export function AppRoutes(){
                 tabBarShowLabel: false,
                 tabBarActiveTintColor: colors.green[500],
                 tabBarInactiveTintColor: colors.gray[200],
+                
                 tabBarStyle: {
                     backgroundColor: colors.gray[600],
                     borderTopWidth: 0,  
@@ -57,7 +58,7 @@ export function AppRoutes(){
 
             <Screen
                 name="history"
-                component={History}
+                component={ History }
                 options={{
                     tabBarIcon: ({ color }) => (
                         <HistorySvg fill={color} width={iconSize} height={iconSize}/>
@@ -67,7 +68,7 @@ export function AppRoutes(){
 
             <Screen
                 name="profile"
-                component={Profile}
+                component={ Profile }
                 options={{
                     tabBarIcon: ({ color }) => (
                         <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
@@ -77,7 +78,7 @@ export function AppRoutes(){
 
             <Screen
                 name="exercise"
-                component={Exercise}
+                component={ Exercise }
                 options={{ tabBarButton: () => null }}
             />
         </Navigator>

@@ -4,7 +4,6 @@ import { SignIn } from "src/Screens/Login/SignIn";
 import { SignUp } from "src/Screens/Login/SignUp";
 
 
-
 type RoutesProps = {
     signIn: undefined,
     signUp: undefined
