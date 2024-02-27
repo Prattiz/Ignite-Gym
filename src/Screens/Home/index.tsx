@@ -24,7 +24,7 @@ export function Home(){
 
                 renderItem={({ item }) => (
                     <Group
-                        name={item}
+                        name={ item }
                         isActive={ groupSelectd === item }
                         onPress={() => setGroupSelectd(item)}
                     />
@@ -55,9 +55,6 @@ export function Home(){
                     renderItem={ ({ item }) => <Card/> }
                     _contentContainerStyle={{ paddingBottom: 20 }}
                     showsVerticalScrollIndicator={ false }
-                    
-                    
-
                 />
             </VStack>
 
