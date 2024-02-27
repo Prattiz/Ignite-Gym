@@ -2,19 +2,29 @@ import { FlatList, HStack, Heading, Text, VStack } from "native-base";
 
 import { useState } from "react";
 
+import { useNavigation } from "@react-navigation/native";
+import { AppNavigatorRoutesProps } from "@routes/app.routes";
+
 import { Header } from "@components/Home/Header";
 import { Group } from "@components/Home/Group";
 import { Card } from "@components/Home/Card";
 
 
+
 export function Home(){
 
     const [ groups ] = useState(["costas", "ombro" , "perna" , "peito" , "triceps" , "biceps"]);
-    const [ exercises, setExercises ] = useState(["1", "2" , "3" , "4" , "5" , "6"]);
-    const [ groupSelectd, setGroupSelectd ] = useState("costas")
+    const [ exercises, setExercises ] = useState(["1", "2" , "3" , "4", "5" ]);
+    const [ groupSelectd, setGroupSelectd ] = useState("costas");
+
+    const navigation = useNavigation<AppNavigatorRoutesProps>()
+
+    function handleExercise(){
+        navigation.navigate('exercise')
+    }
 
     return(
-        <VStack>
+        <VStack pb={20}>
             <Header/>
 
             <FlatList
@@ -52,8 +62,7 @@ export function Home(){
                 <FlatList
                     data={exercises}
                     keyExtractor={item => item}
-                    renderItem={ ({ item }) => <Card/> }
-                    _contentContainerStyle={{ paddingBottom: 20 }}
+                    renderItem={ ({ item }) => <Card onPress={handleExercise}/> }
                     showsVerticalScrollIndicator={ false }
                 />
             </VStack>
