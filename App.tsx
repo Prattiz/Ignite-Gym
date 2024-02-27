@@ -6,7 +6,7 @@ import { THEME } from 'src/theme';
 
 import { NativeBaseProvider } from 'native-base';
 
-import { Loading } from '@components/loading';
+import { Loading } from '@components/Loading';
 import { Routes } from '@routes/index';
 
 export default function App() {
