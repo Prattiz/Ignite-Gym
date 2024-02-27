@@ -1,7 +1,5 @@
 import { HStack, Heading, VStack, Text } from "native-base";
 
-import { SectionList } from "react-native";
-
 
 export function HistoryCard(){
     return(

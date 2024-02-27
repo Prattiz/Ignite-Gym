@@ -18,7 +18,7 @@ export function Card({ ...rest }: Props) {
                     alt="Imagem do exercicio"
                     w={16}
                     h={16}
-                    resizeMode="center"
+                    resizeMode="cover"
                     rounded="md"
                 />
 
