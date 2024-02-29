@@ -8,12 +8,27 @@ import { Button } from "@components/Button";
 
 import { useNavigation } from "@react-navigation/native";
 
+
+import { useForm, Controller } from "react-hook-form";
+
+type FormDataProps = {
+    name: string;
+    email: string;
+    password: string;
+    confirm_password: string;
+}
+
 export function SignUp(){
+
+    const { control, handleSubmit, formState:{ errors } } = useForm<FormDataProps>();
 
     const navigation = useNavigation();
 
-    function handleGoBack(){
+    function handleGoBack({ data }: any){
         navigation.goBack()
+    }
+
+    function handleSignUp(){
     }
 
     return(
@@ -50,27 +65,84 @@ export function SignUp(){
                     Crie sua conta
                 </Heading>
 
-                <Input 
-                    placeholder="Name"
+                <Controller 
+                    control={control}
+                    name="name"
+                    
+                    rules={{
+                        required: 'Informe o nome...'
+                    }}
+                    
+                    render={({ field: { onChange, value }}) => (
+                        <Input 
+                            placeholder="Name"
+                            onChangeText={onChange}
+                            value={value}
+                        />
+                    )}
                 />
 
-                <Input 
-                    placeholder="E-mail"
-                    keyboardType="email-address"
-                    autoCapitalize="none"
+                
+                <Controller 
+                    control={control}
+                    name="email"
+                    
+                    rules={{
+                        required: 'Informe seu e-mail...',
+                        pattern: {
+                            value:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: 'E-mail inválido'
+                        }
+                    }}
+
+                    render={({ field: { onChange, value }}) => (
+                        <Input 
+                            placeholder="E-mail"
+                            keyboardType="email-address"
+                            autoCapitalize="none"
+                            onChangeText={onChange}
+                            value={value}
+                        />
+                    )}
+                />
+                
+
+                <Controller 
+                    control={control}
+                    name="password"
+                    rules={{
+                        required: 'Insira sua senha...'
+                    }}
+                    render={({ field: { onChange, value }}) => (
+                        <Input 
+                            placeholder="Senha"
+                            secureTextEntry
+                            onChangeText={onChange}
+                            value={value}
+                        />
+                    )}
                 />
 
-                <Input 
-                    placeholder="Senha"
-                    secureTextEntry
+                <Controller 
+                    control={control}
+                    name="confirm_password"
+                    rules={{
+                        required: 'Confirme sua senha...'
+                    }}
+                    render={({ field: { onChange, value }}) => (
+                        <Input 
+                            placeholder="Confirmar a Senha"
+                            secureTextEntry
+                            onChangeText={onChange}
+                            value={value}
+                            onSubmitEditing={handleSubmit(handleSignUp)}
+                            returnKeyType="send"
+                        />
+                    )}
                 />
 
-                <Input 
-                    placeholder="Confirmar a Senha"
-                    secureTextEntry
-                />
-
-                <Button title="Criar e acessar"/>
+            
+                <Button title="Criar e acessar" onPress={handleSubmit(handleSignUp)}/>
             </Center>
 
             <Button 

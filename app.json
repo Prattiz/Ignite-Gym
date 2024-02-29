@@ -4,7 +4,7 @@
     "slug": "ignitegym",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/icon.svg",
+    "icon": "",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "",
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/icon.svg",
+        "foregroundImage": "",
         "backgroundColor": "#ffffff"
       }
     },
