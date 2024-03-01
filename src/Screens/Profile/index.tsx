@@ -117,7 +117,7 @@ export function Profile(){
                     />
 
                     <VStack mt={12} mb={8} w="full">
-                        <Heading fontSize="md" mb={5} color="gray.200">Alterar senha</Heading>
+                        <Heading fontSize="md" mb={5} color="gray.200" fontFamily="heading">Alterar senha</Heading>
 
                         <Input
                             placeholder="Senha antiga"

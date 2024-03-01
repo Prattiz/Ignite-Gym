@@ -16,8 +16,8 @@ export function Header(){
             />
 
             <VStack ml={4} flex={1}>
-                <Text color="gray.100" fontSize="md">Olá,</Text>
-                <Heading color="gray.100"  fontSize="md">Thiago Pratti</Heading>
+                <Text color="gray.100" fontSize="md" fontFamily="heading">Olá,</Text>
+                <Heading color="gray.100"  fontSize="md" fontFamily="heading">Thiago Pratti</Heading>
             </VStack>
 
             <TouchableOpacity>

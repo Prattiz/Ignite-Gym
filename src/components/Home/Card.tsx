@@ -23,7 +23,7 @@ export function Card({ ...rest }: Props) {
                 />
 
                 <VStack ml={4} flex={1}>
-                    <Heading fontSize="lg" color="white">Remada Unilateral</Heading>
+                    <Heading fontSize="lg" color="white" fontFamily="heading">Remada Unilateral</Heading>
 
                     <Text fontSize="sm" color="gray.200" mt={1} numberOfLines={2}>3 series x 12 repetições</Text>
                 </VStack>
