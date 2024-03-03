@@ -5,3 +5,4 @@ to make readme.md
 - NativeBase
 - React Hook Form
 - Yup Resolver
+- axios
